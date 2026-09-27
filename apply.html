@@ -1,0 +1,898 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sewa Setu - Apply for Service</title>
+
+    <link rel="stylesheet" href="apply.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo-section">
+
+        <div class="logo">
+            SS
+        </div>
+
+        <div>
+            <h2>Sewa Setu</h2>
+            <p>Government Services</p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">⌂ Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="#">Track Application</a>
+        <a href="#">Help</a>
+
+    </nav>
+
+
+    <div class="account">
+        👤 Login / Signup
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="application-container">
+
+
+    <!-- ================= LEFT SIDE ================= -->
+
+    <section class="service-information">
+
+        <a href="index.html" class="back-link">
+            ← Back to Service Details
+        </a>
+
+
+        <div class="service-title">
+
+            <div class="large-icon">
+                ₹
+            </div>
+
+            <div>
+
+                <h1>Income Certificate</h1>
+
+                <p>
+                    Certificate used to verify the annual
+                    income of an individual or family.
+                </p>
+
+                <span class="department">
+                    Revenue Department
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICE INFORMATION -->
+
+        <div class="service-stats">
+
+            <div>
+
+                <span>₹</span>
+
+                <small>Fee</small>
+
+                <strong>₹30</strong>
+
+            </div>
+
+
+            <div>
+
+                <span>◷</span>
+
+                <small>Processing Time</small>
+
+                <strong>15–30 Days</strong>
+
+            </div>
+
+
+            <div>
+
+                <span>▣</span>
+
+                <small>Validity</small>
+
+                <strong>1 Year</strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- DOCUMENTS -->
+
+        <div class="info-card">
+
+            <h3>
+                📄 Required Documents
+            </h3>
+
+            <ul>
+
+                <li>Aadhaar Card</li>
+
+                <li>
+                    Identity Proof
+                    <span>
+                        (Voter ID / Driving License etc.)
+                    </span>
+                </li>
+
+                <li>
+                    Address Proof
+                    <span>
+                        (Ration Card / Electricity Bill etc.)
+                    </span>
+                </li>
+
+                <li>
+                    Income-related document
+                    <span>
+                        (Salary Slip / ITR / other proof)
+                    </span>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- IMPORTANT INFORMATION -->
+
+        <div class="important-card">
+
+            <h3>
+                ⓘ Important Information
+            </h3>
+
+            <ul>
+
+                <li>
+                    Only the applicant's name should
+                    be on all documents.
+                </li>
+
+                <li>
+                    Ensure all documents are clear
+                    and valid.
+                </li>
+
+                <li>
+                    You can track your application
+                    status after submission.
+                </li>
+
+                <li>
+                    The certificate will be available
+                    for download once approved.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="government-image">
+
+            <div class="document-icon">
+                📄
+            </div>
+
+            <div class="check-icon">
+                ✓
+            </div>
+
+        </div>
+
+        <p class="commitment">
+            Your Service &nbsp; | &nbsp; Our Commitment
+        </p>
+
+        <p class="tagline">
+            Sewa Setu - Bridging Citizens and Government
+        </p>
+
+    </section>
+
+
+    <!-- ================= RIGHT SIDE ================= -->
+
+    <section class="application-area">
+
+
+        <!-- LOGIN CARD -->
+
+        <div class="login-card" id="loginSection">
+
+            <h2>Login to Continue</h2>
+
+            <p>
+                Enter your mobile number and password
+                to access your account and apply for
+                government services.
+            </p>
+
+
+            <div class="input-group">
+
+                <label>Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    placeholder="e.g. 9876543210"
+                    maxlength="10"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                    >
+
+                    <button
+                        type="button"
+                        onclick="togglePassword()"
+                    >
+                        👁
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="loginUser()"
+            >
+                Login
+            </button>
+
+
+            <a href="#" class="forgot">
+                Forgot Password?
+            </a>
+
+
+            <div class="or">
+                <span></span>
+                OR
+                <span></span>
+            </div>
+
+
+            <button
+                class="create-account"
+                onclick="createAccount()"
+            >
+                👤 Create New Account
+            </button>
+
+        </div>
+
+
+        <!-- ================= FORM ================= -->
+
+        <div
+            class="form-card"
+            id="formSection"
+            style="display:none;"
+        >
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress">
+
+                <div class="progress-step active">
+                    <span>1</span>
+                    <small>Personal Details</small>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="progress-step">
+                    <span>2</span>
+                    <small>Address Details</small>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="progress-step">
+                    <span>3</span>
+                    <small>Documents</small>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="progress-step">
+                    <span>4</span>
+                    <small>Preview</small>
+                </div>
+
+            </div>
+
+
+            <h2 id="formTitle">
+                Fill Your Details
+            </h2>
+
+            <p class="form-description">
+                Please provide accurate information
+                as per your official documents.
+            </p>
+
+
+            <!-- ================= STEP 1 ================= -->
+
+            <div class="form-step active-step" id="step1">
+
+                <div class="form-section-title">
+                    👤 Personal Information
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Date of Birth *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Gender *
+                        </label>
+
+                        <select id="gender">
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option>
+                                Male
+                            </option>
+
+                            <option>
+                                Female
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Father's / Husband's Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="relativeName"
+                            placeholder="Enter name"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Category *
+                        </label>
+
+                        <select id="category">
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option>
+                                General
+                            </option>
+
+                            <option>
+                                OBC
+                            </option>
+
+                            <option>
+                                SC
+                            </option>
+
+                            <option>
+                                ST
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Annual Income *
+                        </label>
+
+                        <input
+                            type="number"
+                            id="income"
+                            placeholder="Enter annual income"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Mobile Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="appMobile"
+                            placeholder="Enter mobile number"
+                            maxlength="10"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Email ID
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email ID"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        class="primary-button next-button"
+                        onclick="nextStep(1)"
+                    >
+                        Next →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= STEP 2 ================= -->
+
+            <div
+                class="form-step"
+                id="step2"
+            >
+
+                <div class="form-section-title">
+                    🏠 Address Information
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group full-width">
+
+                        <label>
+                            House / Street Address *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="Enter your complete address"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            District *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="district"
+                            placeholder="Enter district"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Tehsil *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tehsil"
+                            placeholder="Enter tehsil"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Village / City *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="Enter village or city"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            State *
+                        </label>
+
+                        <select id="state">
+
+                            <option value="">
+                                Select State
+                            </option>
+
+                            <option selected>
+                                Chhattisgarh
+                            </option>
+
+                            <option>
+                                Madhya Pradesh
+                            </option>
+
+                            <option>
+                                Maharashtra
+                            </option>
+
+                            <option>
+                                Odisha
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            PIN Code *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pincode"
+                            placeholder="6 digit PIN"
+                            maxlength="6"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        class="secondary-button"
+                        onclick="previousStep(2)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        onclick="nextStep(2)"
+                    >
+                        Next →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= STEP 3 ================= -->
+
+            <div
+                class="form-step"
+                id="step3"
+            >
+
+                <div class="form-section-title">
+                    📄 Upload Documents
+                </div>
+
+
+                <p class="upload-info">
+                    Upload clear PDF, JPG or PNG files.
+                    Maximum size: 2 MB per document.
+                </p>
+
+
+                <div class="upload-box">
+
+                    <label>
+                        Aadhaar Card *
+                    </label>
+
+                    <input
+                        type="file"
+                        id="aadhaar"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                    >
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    <label>
+                        Address Proof *
+                    </label>
+
+                    <input
+                        type="file"
+                        id="addressProof"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                    >
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    <label>
+                        Income Proof *
+                    </label>
+
+                    <input
+                        type="file"
+                        id="incomeProof"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                    >
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    <label>
+                        Other Supporting Document
+                    </label>
+
+                    <input
+                        type="file"
+                        id="otherDocument"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                    >
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        class="secondary-button"
+                        onclick="previousStep(3)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        onclick="nextStep(3)"
+                    >
+                        Preview →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= STEP 4 ================= -->
+
+            <div
+                class="form-step"
+                id="step4"
+            >
+
+                <div class="form-section-title">
+                    ✓ Preview Application
+                </div>
+
+
+                <div
+                    id="previewData"
+                    class="preview-box"
+                ></div>
+
+
+                <label class="declaration">
+
+                    <input
+                        type="checkbox"
+                        id="declaration"
+                    >
+
+                    I confirm that the information
+                    provided by me is correct and
+                    complete.
+
+                </label>
+
+
+                <div class="button-row">
+
+                    <button
+                        class="secondary-button"
+                        onclick="previousStep(4)"
+                    >
+                        ← Back
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        onclick="submitApplication()"
+                    >
+                        Submit Application
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= SUCCESS ================= -->
+
+        <div
+            class="success-card"
+            id="successSection"
+            style="display:none;"
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Application Submitted!
+            </h2>
+
+            <p>
+                Your Income Certificate application
+                has been successfully submitted.
+            </p>
+
+            <div class="application-number">
+
+                Application Number
+
+                <strong id="applicationNumber">
+                    SS2026001234
+                </strong>
+
+            </div>
+
+            <p>
+                You can use this application number
+                to track your application status.
+            </p>
+
+            <button
+                class="primary-button"
+                onclick="window.location.href='index.html'"
+            >
+                Back to Home
+            </button>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<script src="apply.js"></script>
+
+</body>
+</html>
+```
